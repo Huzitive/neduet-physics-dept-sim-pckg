@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEDUET Physics Simulations</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      opacity: 0;
+      animation: fadeIn 0.8s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    header {
+      background: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.5rem 2rem;
+    }
+
+    header img {
+      height: 60px;
+      width: auto;
+    }
+
+    header h1 {
+      font-size: 1.7rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .sim-card {
+      background: #fff;
+      padding: 2rem;
+      border-left: 5px solid #000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideFadeIn 0.6s ease-out forwards;
+    }
+
+    .sim-card:nth-child(1) { animation-delay: 0.2s; }
+    .sim-card:nth-child(2) { animation-delay: 0.4s; }
+    .sim-card:nth-child(3) { animation-delay: 0.6s; }
+
+    @keyframes slideFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .sim-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .sim-card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .sim-card p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+
+    .sim-card a {
+      text-decoration: none;
+      color: #fff;
+      background: #000;
+      padding: 0.75rem 1.5rem;
+      display: inline-block;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      transition: background 0.3s ease;
+    }
+
+    .sim-card a:hover {
+      background: #333;
+    }
+
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header img {
+        height: 50px;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      .sim-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="NEDUET_logo.svg.png" alt="NEDUET Logo" />
+    <h1>Physics Department Simulation Package</h1>
+  </header>
+
+  <main>
+    <div class="sim-card">
+      <h2>Wave Pendulum</h2>
+      <p>Visualize synchronized pendulum motion creating wave-like effects. A captivating demo of harmonic motion and resonance principles.</p>
+      <a href="https://huzitive.github.io/Wave-Pendulum/" target="_blank">Launch Simulation</a>
+    </div>
+
+    <div class="sim-card">
+      <h2>Simple Pendulum</h2>
+      <p>Explore the behavior of a simple pendulum and its dependence on factors like length and gravity. Ideal for conceptual understanding.</p>
+      <a href="https://huzitive.github.io/Simple-Pendulum/" target="_blank">Launch Simulation</a>
+    </div>
+
+    <div class="sim-card">
+      <h2>Resonance Demo</h2>
+      <p>See how external periodic forces cause objects to vibrate at their natural frequency. This simulation shows resonance in action.</p>
+      <a href="https://huzitive.github.io/Resonance104/" target="_blank">Launch Simulation</a>
+    </div>
+  </main>
+
+  <footer>
+    Created by Huzaifa Ahmed Khan under the supervision of Miss Marium Ghulam Nabi
+  </footer>
+
+</body>
+</html>
